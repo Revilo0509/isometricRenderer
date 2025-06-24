@@ -1,21 +1,4 @@
-#include <iostream>
-#include <math.h>
-#include <vector>
-
-#define RAYGUI_IMPLEMENTATION
-#include "raygui.h"
-#include "raylib.h"
-#include "resource_dir.h"
-
-#include "gameClasses.hpp"
-#include "worldgen.hpp"
-
-const int WINDOW_HEIGHT = 800;
-const int WINDOW_WIDTH = 1280;
-
-const int WORLD_SIZE = 32;
-
-const Texture noTextureImg = LoadTexture("no_texture.png");
+#include "main.hpp"
 
 int main () {
     SetConfigFlags(FLAG_VSYNC_HINT | FLAG_WINDOW_HIGHDPI);
@@ -30,6 +13,7 @@ int main () {
     const Texture cobblestone = LoadTexture("cobblestone.png");
     const Texture tree = LoadTexture("tree.png");
     
+
     Texture heldItem = cube;
 
     Vector2 mousePos = { 0.0f, 0.0f };

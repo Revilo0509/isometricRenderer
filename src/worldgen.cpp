@@ -1,9 +1,5 @@
 #include "worldgen.hpp"
 
-Color rgb(int r, int g, int b, int a) {
-    return Color{ (unsigned char)r, (unsigned char)g, (unsigned char)b, (unsigned char)a };
-}
-
 void generateWorld(terrainPoint* world, Texture tree) {
     siv::PerlinNoise perlin{ std::random_device{}() };
     siv::PerlinNoise perlin2{ std::random_device{}() + 1 };
