@@ -13,6 +13,7 @@
 		"xstring": "cpp",
 		"*.m": "cpp",
 		"xiosbase": "cpp",
-		"vector": "cpp"
+		"vector": "cpp",
+		"iostream": "cpp"
 	}
 }

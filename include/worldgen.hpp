@@ -5,6 +5,8 @@
 #include "PerlinNoise.hpp"
 #include <random>
 
+#include <iostream>
+
 extern const int WORLD_SIZE;
 
 void generateWorld(terrainPoint* world);
