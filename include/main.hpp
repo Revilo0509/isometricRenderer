@@ -19,3 +19,12 @@ const int WINDOW_WIDTH = 1280;
 const int WORLD_SIZE = 32;
 
 const Texture noTextureImg = LoadTexture("no_texture.png");
+
+void init();
+void handleZoom(int& zoom, int minZoom, int maxZoom, float scrollSpeed);
+void handleMouse(Vector2& mousePos, Vector2& mouseDelta);
+void getMouseGridPosition(const Vector2& mousePos, const Texture& terrainBlock, int zoom, int worldXOffset, int worldYOffset,
+                          terrainPoint world[WORLD_SIZE][WORLD_SIZE], int& mouse_i, int& mouse_j, bool& mouseOnMap);
+void handleDragging(bool& mouseIsDragging, const Vector2& mouseDelta, int& worldXOffset, int& worldYOffset, const Texture& terrainBlock);
+void handleHeldItemSwitch(Texture& heldItem, const Texture& cube, const Texture& terrainBlock, const Texture& cobblestone, const Texture& tree);
+void drawWorld(terrainPoint world[WORLD_SIZE][WORLD_SIZE], const Texture& terrainBlock, int zoom, int worldXOffset, int worldYOffset, int mouse_i, int mouse_j, Texture heldItem);
