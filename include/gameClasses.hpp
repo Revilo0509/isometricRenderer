@@ -2,7 +2,8 @@
 
 #include "raylib.h"
 #include "iostream"
-#include "gameGlobalVariables.h"
+
+extern const Texture noTextureImg;
 
 class object {
     public:

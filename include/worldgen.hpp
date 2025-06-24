@@ -2,10 +2,11 @@
 
 #include "raylib.h"
 #include "gameClasses.hpp"
-#include "gameGlobalVariables.h"
 #include "PerlinNoise.hpp"
 #include <random>
 
+extern const int WORLD_SIZE;
+
 Color rgb(int r, int g, int b, int a = 255);
 
-void generateWorld(terrainPoint world[WORLD_SIZE][WORLD_SIZE], Texture tree);
+void generateWorld(terrainPoint* world, Texture tree);

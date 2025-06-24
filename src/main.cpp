@@ -2,15 +2,20 @@
 #include <math.h>
 #include <vector>
 
-
 #define RAYGUI_IMPLEMENTATION
 #include "raygui.h"
 #include "raylib.h"
 #include "resource_dir.h"
 
 #include "gameClasses.hpp"
-#include "gameGlobalVariables.h"
-#include "other.hpp"
+#include "worldgen.hpp"
+
+const int WINDOW_HEIGHT = 800;
+const int WINDOW_WIDTH = 1280;
+
+const int WORLD_SIZE = 32;
+
+const Texture noTextureImg = LoadTexture("no_texture.png");
 
 int main () {
     SetConfigFlags(FLAG_VSYNC_HINT | FLAG_WINDOW_HIGHDPI);
@@ -40,7 +45,7 @@ int main () {
     int worldYOffset = 0;
 
     terrainPoint world[WORLD_SIZE][WORLD_SIZE];
-    generateWorld(world, tree);
+    generateWorld(*world, tree);
 
     while (!WindowShouldClose()) {
 
@@ -105,9 +110,9 @@ int main () {
                     // Calculate Screen Position
                     int x = ((i - j) * (terrainBlock.width / 2) * zoom + WINDOW_WIDTH / 2 - (terrainBlock.width * zoom) / 2) + worldXOffset;
                     int y = (((i + j) * (terrainBlock.height / 4) * zoom + WINDOW_HEIGHT / 2 - (terrainBlock.height * zoom * WORLD_SIZE) / 4) + world[i][j].height * zoom) + worldYOffset;
-                    Rectangle source = { 0, 0, terrainBlock.width, terrainBlock.height };
-                    Rectangle terrainPlace = {x, y, terrainBlock.width * zoom, terrainBlock.height * zoom };
-                    Rectangle landmarkPlace = { x, (y - (terrainBlock.height * zoom) / 2) + 1, terrainBlock.width * zoom, terrainBlock.height * zoom };
+                    Rectangle source = { 0.0f, 0.0f, (float)terrainBlock.width, (float)terrainBlock.height };
+                    Rectangle terrainPlace = { (float)x, (float)y, (float)(terrainBlock.width * zoom), (float)(terrainBlock.height * zoom) };
+                    Rectangle landmarkPlace = { (float)x, (float)((y - (terrainBlock.height * zoom) / 2) + 1), (float)(terrainBlock.width * zoom), (float)(terrainBlock.height * zoom) };
                     
                     // Highligt the hovered block
                     if (i == mouse_i && j == mouse_j) { 
@@ -123,7 +128,7 @@ int main () {
             
             DrawTexture(heldItem, 10, 10, WHITE);
             
-            if (GuiButton(Rectangle{ WINDOW_WIDTH - 130, 10, 120, 30 }, "Regenerate World")) { generateWorld(world, tree); };
+            if (GuiButton(Rectangle{ WINDOW_WIDTH - 130, 10, 120, 30 }, "Regenerate World")) { generateWorld(*world, tree); };
             
 
         EndDrawing();
