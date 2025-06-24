@@ -23,7 +23,7 @@ int main() {
     int worldXOffset = 0, worldYOffset = 0;
 
     terrainPoint world[WORLD_SIZE][WORLD_SIZE];
-    generateWorld(*world);
+    generateWorld(*world, tree);
 
     // --- Main Loop ---
     while (!WindowShouldClose()) {
@@ -48,7 +48,7 @@ int main() {
             drawWorld(world, grassTextures, zoom, worldXOffset, worldYOffset, mouse_i, mouse_j, heldItem);
             DrawTexture(heldItem, 10, 10, WHITE);
             if (GuiButton(Rectangle{ WINDOW_WIDTH - 130, 10, 120, 30 }, "Regenerate World")) {
-                generateWorld(*world);
+                generateWorld(*world, tree);
             }
             DrawTexture(grassTextures.corner_EN, 10, 50, WHITE);
 
@@ -240,7 +240,7 @@ void drawWorld(terrainPoint world[WORLD_SIZE][WORLD_SIZE], const terrainTextures
             // Where to draw the landmark/object (slightly above the block)
             Rectangle landmarkPlace = {
                 (float)x,
-                (float)((y - (blockHeight * zoom) / 2) + 1),
+                (float)((((y - (zoom ^ 2)) - (blockHeight * zoom) / 2) + 1)) + blockHeight / 4,
                 (float)(blockWidth * zoom),
                 (float)(blockHeight * zoom)
             };

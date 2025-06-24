@@ -1,6 +1,6 @@
 #include "worldgen.hpp"
 
-void generateWorld(terrainPoint* world) {
+void generateWorld(terrainPoint* world, Texture tree) {
     siv::PerlinNoise perlin{ std::random_device{}() };
     siv::PerlinNoise perlin2{ std::random_device{}() + 1 };
     double frequency = 4.0;
@@ -16,7 +16,7 @@ void generateWorld(terrainPoint* world) {
             int height = static_cast<int>(noise * maxHeight + 0.5); // round to nearest int
             world[i * WORLD_SIZE + j].height = height;
             double noise2 = perlin2.octave2D_01(i * f, j * f, octaves) * 100;
-            // if (noise2 > treeCutOff) { world[i * WORLD_SIZE + j].landmark = tree; } else { world[i * WORLD_SIZE + j].landmark = emptyTexture; };
+            if (noise2 > treeCutOff) { world[i * WORLD_SIZE + j].landmark = tree; } else { world[i * WORLD_SIZE + j].landmark = emptyTexture; };
         }
     }
 }
