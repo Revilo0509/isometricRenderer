@@ -7,4 +7,4 @@
 
 extern const int WORLD_SIZE;
 
-void generateWorld(terrainPoint* world, Texture tree);
+void generateWorld(terrainPoint* world);

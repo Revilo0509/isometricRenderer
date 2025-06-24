@@ -20,7 +20,7 @@ int main() {
     int worldXOffset = 0, worldYOffset = 0;
 
     terrainPoint world[WORLD_SIZE][WORLD_SIZE];
-    generateWorld(*world, tree);
+    generateWorld(*world);
 
     // --- Main Loop ---
     while (!WindowShouldClose()) {
@@ -45,7 +45,7 @@ int main() {
             drawWorld(world, terrainBlock, zoom, worldXOffset, worldYOffset, mouse_i, mouse_j, heldItem);
             DrawTexture(heldItem, 10, 10, WHITE);
             if (GuiButton(Rectangle{ WINDOW_WIDTH - 130, 10, 120, 30 }, "Regenerate World")) {
-                generateWorld(*world, tree);
+                generateWorld(*world);
             }
         EndDrawing();
     }
