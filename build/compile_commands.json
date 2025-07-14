@@ -1,0 +1,20 @@
+[
+{
+  "directory": "C:/Users/olive/Documents/GitHub/isometricRenderer/build",
+  "command": "C:\\Compilers\\mingw64\\bin\\g++.exe  @CMakeFiles/projectName.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\projectName.dir\\src\\main.cpp.obj -c C:\\Users\\olive\\Documents\\GitHub\\isometricRenderer\\src\\main.cpp",
+  "file": "C:/Users/olive/Documents/GitHub/isometricRenderer/src/main.cpp",
+  "output": "CMakeFiles/projectName.dir/src/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/olive/Documents/GitHub/isometricRenderer/build",
+  "command": "C:\\Compilers\\mingw64\\bin\\g++.exe  @CMakeFiles/projectName.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\projectName.dir\\src\\misc.cpp.obj -c C:\\Users\\olive\\Documents\\GitHub\\isometricRenderer\\src\\misc.cpp",
+  "file": "C:/Users/olive/Documents/GitHub/isometricRenderer/src/misc.cpp",
+  "output": "CMakeFiles/projectName.dir/src/misc.cpp.obj"
+},
+{
+  "directory": "C:/Users/olive/Documents/GitHub/isometricRenderer/build",
+  "command": "C:\\Compilers\\mingw64\\bin\\g++.exe  @CMakeFiles/projectName.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\projectName.dir\\src\\worldgen.cpp.obj -c C:\\Users\\olive\\Documents\\GitHub\\isometricRenderer\\src\\worldgen.cpp",
+  "file": "C:/Users/olive/Documents/GitHub/isometricRenderer/src/worldgen.cpp",
+  "output": "CMakeFiles/projectName.dir/src/worldgen.cpp.obj"
+}
+]
