@@ -1,3 +1,3 @@
-C:/Users/olive/Documents/GitHub/isometricRenderer/build/CMakeFiles/projectName.dir
+C:/Users/olive/Documents/GitHub/isometricRenderer/build/CMakeFiles/isometricRenderer.dir
 C:/Users/olive/Documents/GitHub/isometricRenderer/build/CMakeFiles/edit_cache.dir
 C:/Users/olive/Documents/GitHub/isometricRenderer/build/CMakeFiles/rebuild_cache.dir

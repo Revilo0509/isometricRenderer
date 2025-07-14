@@ -783,7 +783,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "projectName"
+			"value" : "isometricRenderer"
 		},
 		{
 			"name" : "CMAKE_PROJECT_VERSION",
@@ -1290,12 +1290,36 @@
 			"value" : "ON"
 		},
 		{
+			"name" : "FETCHCONTENT_SOURCE_DIR_RAYGUI",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "When not empty, overrides where to find pre-populated content for raygui"
+				}
+			],
+			"type" : "PATH",
+			"value" : ""
+		},
+		{
 			"name" : "FETCHCONTENT_UPDATES_DISCONNECTED",
 			"properties" : 
 			[
 				{
 					"name" : "HELPSTRING",
 					"value" : "Enables UPDATE_DISCONNECTED behavior for all content population"
+				}
+			],
+			"type" : "BOOL",
+			"value" : "OFF"
+		},
+		{
+			"name" : "FETCHCONTENT_UPDATES_DISCONNECTED_RAYGUI",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Enables UPDATE_DISCONNECTED behavior just for population of raygui"
 				}
 			],
 			"type" : "BOOL",
@@ -1312,6 +1336,22 @@
 			],
 			"type" : "INTERNAL",
 			"value" : "[C:/Users/olive/Documents/GitHub/vcpkg/installed/x64-windows/debug/lib/raylib.lib][C:/Users/olive/Documents/GitHub/vcpkg/installed/x64-windows/include][v()]"
+		},
+		{
+			"name" : "GIT_EXECUTABLE",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Git command line client"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "C:/Program Files/Git/cmd/git.exe"
 		},
 		{
 			"name" : "PC_RAYLIB_CFLAGS",
@@ -1830,6 +1870,42 @@
 			"value" : "1"
 		},
 		{
+			"name" : "isometricRenderer_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/Users/olive/Documents/GitHub/isometricRenderer/build"
+		},
+		{
+			"name" : "isometricRenderer_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "ON"
+		},
+		{
+			"name" : "isometricRenderer_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/Users/olive/Documents/GitHub/isometricRenderer"
+		},
+		{
 			"name" : "projectName_BINARY_DIR",
 			"properties" : 
 			[
@@ -1864,6 +1940,18 @@
 			],
 			"type" : "STATIC",
 			"value" : "C:/Users/olive/Documents/GitHub/isometricRenderer"
+		},
+		{
+			"name" : "raygui_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for raygui."
+				}
+			],
+			"type" : "PATH",
+			"value" : "raygui_DIR-NOTFOUND"
 		},
 		{
 			"name" : "raylib_DIR",

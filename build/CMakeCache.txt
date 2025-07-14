@@ -133,7 +133,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=projectName
+CMAKE_PROJECT_NAME:STATIC=isometricRenderer
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION:STATIC=
@@ -246,8 +246,18 @@ FETCHCONTENT_FULLY_DISCONNECTED:BOOL=OFF
 //Enables QUIET option for all content population
 FETCHCONTENT_QUIET:BOOL=ON
 
+//When not empty, overrides where to find pre-populated content
+// for raygui
+FETCHCONTENT_SOURCE_DIR_RAYGUI:PATH=
+
 //Enables UPDATE_DISCONNECTED behavior for all content population
 FETCHCONTENT_UPDATES_DISCONNECTED:BOOL=OFF
+
+//Enables UPDATE_DISCONNECTED behavior just for population of raygui
+FETCHCONTENT_UPDATES_DISCONNECTED_RAYGUI:BOOL=OFF
+
+//Git command line client
+GIT_EXECUTABLE:FILEPATH=C:/Program Files/Git/cmd/git.exe
 
 //Arguments to supply to pkg-config
 PKG_CONFIG_ARGN:STRING=
@@ -305,6 +315,15 @@ Z_VCPKG_PWSH_PATH:FILEPATH=C:/Program Files/PowerShell/7/pwsh.exe
 _VCPKG_INSTALLED_DIR:PATH=C:/Users/olive/Documents/GitHub/vcpkg/installed
 
 //Value Computed by CMake
+isometricRenderer_BINARY_DIR:STATIC=C:/Users/olive/Documents/GitHub/isometricRenderer/build
+
+//Value Computed by CMake
+isometricRenderer_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+isometricRenderer_SOURCE_DIR:STATIC=C:/Users/olive/Documents/GitHub/isometricRenderer
+
+//Value Computed by CMake
 projectName_BINARY_DIR:STATIC=C:/Users/olive/Documents/GitHub/isometricRenderer/build
 
 //Value Computed by CMake
@@ -312,6 +331,9 @@ projectName_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 projectName_SOURCE_DIR:STATIC=C:/Users/olive/Documents/GitHub/isometricRenderer
+
+//The directory containing a CMake configuration file for raygui.
+raygui_DIR:PATH=raygui_DIR-NOTFOUND
 
 //The directory containing a CMake configuration file for raylib.
 raylib_DIR:PATH=C:/Users/olive/Documents/GitHub/vcpkg/installed/x64-windows/share/raylib
@@ -473,6 +495,8 @@ CMAKE_TOOLCHAIN_FILE-ADVANCED:INTERNAL=1
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding raylib
 FIND_PACKAGE_MESSAGE_DETAILS_raylib:INTERNAL=[C:/Users/olive/Documents/GitHub/vcpkg/installed/x64-windows/debug/lib/raylib.lib][C:/Users/olive/Documents/GitHub/vcpkg/installed/x64-windows/include][v()]
+//ADVANCED property for variable: GIT_EXECUTABLE
+GIT_EXECUTABLE-ADVANCED:INTERNAL=1
 PC_RAYLIB_CFLAGS:INTERNAL=
 PC_RAYLIB_CFLAGS_I:INTERNAL=
 PC_RAYLIB_CFLAGS_OTHER:INTERNAL=

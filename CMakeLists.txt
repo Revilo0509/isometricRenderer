@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.15)
-project(projectName LANGUAGES CXX)
+project(isometricRenderer LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -23,19 +23,26 @@ if (NOT raylib_FOUND)
     FetchContent_MakeAvailable(raylib)
 endif()
 
-add_library(raylib-cpp-wrapper INTERFACE)
-target_include_directories(raylib-cpp-wrapper INTERFACE
-    $<BUILD_INTERFACE:${raylib_cpp_SOURCE_DIR}/include>
-)
+# raygui
+find_package(raygui CONFIG)
+if (NOT raygui_FOUND)
+    message(STATUS "raygui not found. Fetching via FetchContent.")
+    FetchContent_Declare(
+        raygui
+        GIT_REPOSITORY https://github.com/raysan5/raygui.git
+        GIT_TAG 4.0
+    )
+    FetchContent_MakeAvailable(raygui)
+endif()
 
 # --- Executable ---
 add_executable(${PROJECT_NAME} ${SRC_FILES})
 
 target_include_directories(${PROJECT_NAME} PRIVATE
     "${PROJECT_SOURCE_DIR}/include"
+    "${raygui_SOURCE_DIR}/src"  # Or just ${raygui_SOURCE_DIR} depending on where raygui.h is
 )
 
 target_link_libraries(${PROJECT_NAME} PRIVATE
     raylib
-    raylib-cpp-wrapper
 )

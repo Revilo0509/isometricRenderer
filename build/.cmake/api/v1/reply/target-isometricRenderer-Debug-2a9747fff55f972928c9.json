@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "projectName.exe"
+			"path" : "isometricRenderer.exe"
 		},
 		{
-			"path" : "projectName.pdb"
+			"path" : "isometricRenderer.pdb"
 		}
 	],
 	"backtrace" : 2,
@@ -35,7 +35,7 @@
 			{
 				"command" : 1,
 				"file" : 1,
-				"line" : 32,
+				"line" : 39,
 				"parent" : 0
 			},
 			{
@@ -47,7 +47,7 @@
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 38,
+				"line" : 46,
 				"parent" : 0
 			},
 			{
@@ -75,7 +75,7 @@
 			{
 				"command" : 6,
 				"file" : 1,
-				"line" : 34,
+				"line" : 41,
 				"parent" : 0
 			}
 		]
@@ -96,8 +96,8 @@
 					"path" : "C:/Users/olive/Documents/GitHub/isometricRenderer/include"
 				},
 				{
-					"backtrace" : 3,
-					"path" : "/include"
+					"backtrace" : 8,
+					"path" : "C:/Users/olive/Documents/GitHub/isometricRenderer/build/_deps/raygui-src/src"
 				},
 				{
 					"backtrace" : 3,
@@ -122,7 +122,7 @@
 			]
 		}
 	],
-	"id" : "projectName::@6890427a1f51a3e7e1df",
+	"id" : "isometricRenderer::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -148,8 +148,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "projectName",
-	"nameOnDisk" : "projectName.exe",
+	"name" : "isometricRenderer",
+	"nameOnDisk" : "isometricRenderer.exe",
 	"paths" : 
 	{
 		"build" : ".",

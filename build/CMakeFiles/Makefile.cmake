@@ -21,6 +21,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Program Files/CMake/share/cmake-4.1/Modules/Compiler/GNU.cmake"
   "C:/Program Files/CMake/share/cmake-4.1/Modules/ExternalProject/shared_internal_commands.cmake"
   "C:/Program Files/CMake/share/cmake-4.1/Modules/FetchContent.cmake"
+  "C:/Program Files/CMake/share/cmake-4.1/Modules/FetchContent/CMakeLists.cmake.in"
+  "C:/Program Files/CMake/share/cmake-4.1/Modules/FindGit.cmake"
   "C:/Program Files/CMake/share/cmake-4.1/Modules/FindPackageHandleStandardArgs.cmake"
   "C:/Program Files/CMake/share/cmake-4.1/Modules/FindPackageMessage.cmake"
   "C:/Program Files/CMake/share/cmake-4.1/Modules/FindPkgConfig.cmake"
@@ -54,10 +56,11 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
+  "_deps/raygui-subbuild/CMakeLists.txt"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/projectName.dir/DependInfo.cmake"
+  "CMakeFiles/isometricRenderer.dir/DependInfo.cmake"
   )
